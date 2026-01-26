@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "id": "c2b6f7c8-1b2c-4b0a-9a5e-6b6d2f6f3b0a",
+      "titulo": "Preparar miniatura del directo",
+      "descripcion": "Crear miniatura con texto claro y buen contraste",
+      "prioridad": "ALTA",
+      "estado": "PENDIENTE",
+      "createdAt": "2026-01-23T18:40:00Z",
+      "updatedAt": "2026-01-23T18:40:00Z"
+    },
+    {
+      "id": "d3c7g8d9-2c3d-5c1b-0b6f-7c7e3g7g4c1b",
+      "titulo": "Revisar código de la aplicación",
+      "descripcion": "Hacer code review del módulo de persistencia",
+      "prioridad": "MEDIA",
+      "estado": "EN_PROGRESO",
+      "createdAt": "2026-01-23T17:30:00Z",
+      "updatedAt": "2026-01-23T18:00:00Z"
+    },
+    {
+      "id": "e4d8h9e0-3d4e-6d2c-1c7g-8d8f4h8h5d2c",
+      "titulo": "Documentar API REST",
+      "descripcion": "Completar la documentación de los endpoints",
+      "prioridad": "BAJA",
+      "estado": "HECHA",
+      "createdAt": "2026-01-22T14:20:00Z",
+      "updatedAt": "2026-01-23T16:45:00Z"
+    }
+  ]
+}

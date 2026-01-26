@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.inforgonzalez.todo.crud.list.ui.MainViewController"
+            prefHeight="600.0" prefWidth="1000.0">
+    
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    
+    <!-- Panel Superior: Filtros y Controles -->
+    <top>
+        <VBox spacing="10" styleClass="filter-panel">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <style>
+                -fx-border-color: lightgray;
+                -fx-border-radius: 5;
+                -fx-background-color: #f9f9f9;
+            </style>
+            
+            <Label text="Filtros y Ordenación" styleClass="section-title">
+                <style>
+                    -fx-font-weight: bold;
+                    -fx-font-size: 14px;
+                </style>
+            </Label>
+            
+            <!-- Fila de filtros -->
+            <HBox spacing="15" alignment="CENTER_LEFT">
+                <Label text="Buscar:"/>
+                <TextField fx:id="searchField" promptText="Buscar en título y descripción" prefWidth="200"/>
+                
+                <Label text="Estado:"/>
+                <ComboBox fx:id="statusFilterCombo" prefWidth="120" promptText="Todos"/>
+                
+                <Label text="Ordenar por:"/>
+                <ComboBox fx:id="sortCombo" prefWidth="150" promptText="Seleccione..."/>
+                
+                <Button text="Limpiar Filtros" onAction="#onClearFilters"/>
+            </HBox>
+            
+            <!-- Botones de acción -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Button fx:id="newButton" text="➕ Nueva Tarea" onAction="#onCreateTask">
+                    <style>
+                        -fx-font-weight: bold;
+                    </style>
+                </Button>
+                <Button text="✏️ Editar" onAction="#onEditTask"/>
+                <Button text="🗑️ Eliminar" onAction="#onDeleteTask"/>
+                <Button text="🔄 Cambiar Estado" onAction="#onToggleStatus"/>
+                <Button text="🔃 Recargar" onAction="#onRefresh"/>
+                <Region HBox.hgrow="ALWAYS" />
+                <Button text="⬇️ Exportar" onAction="#onExport"/>
+                <Button text="⬆️ Importar" onAction="#onImport"/>
+            </HBox>
+        </VBox>
+    </top>
+    
+    <!-- Panel Central: Tabla de Tareas -->
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="0" bottom="10" left="0"/>
+            </padding>
+            
+            <Label text="Lista de Tareas" styleClass="section-title">
+                <style>
+                    -fx-font-weight: bold;
+                    -fx-font-size: 14px;
+                </style>
+            </Label>
+            
+            <TableView fx:id="taskTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="tituloColumn" text="Título" prefWidth="200"/>
+                    <TableColumn fx:id="prioridadColumn" text="Prioridad" prefWidth="80"/>
+                    <TableColumn fx:id="estadoColumn" text="Estado" prefWidth="100"/>
+                    <TableColumn fx:id="horasColumn" text="Horas" prefWidth="60"/>
+                    <TableColumn fx:id="duracionColumn" text="Duración" prefWidth="80"/>
+                    <TableColumn fx:id="tipoColumn" text="Tipo" prefWidth="120"/>
+                    <TableColumn fx:id="factibilidadColumn" text="Factibilidad" prefWidth="90"/>
+                    <TableColumn fx:id="creadoColumn" text="Creado" prefWidth="120"/>
+                    <TableColumn fx:id="actualizadoColumn" text="Actualizado" prefWidth="120"/>
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                </columnResizePolicy>
+            </TableView>
+        </VBox>
+    </center>
+    
+    <!-- Panel Inferior: Barra de Estado -->
+    <bottom>
+        <HBox styleClass="status-bar">
+            <padding>
+                <Insets top="5" right="5" bottom="5" left="5"/>
+            </padding>
+            <style>
+                -fx-border-color: lightgray;
+                -fx-border-width: 1 0 0 0;
+            </style>
+            
+            <Label fx:id="statusLabel" text="Listo"/>
+        </HBox>
+    </bottom>
+    
+</BorderPane>

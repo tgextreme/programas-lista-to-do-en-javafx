@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+          hgap="10" vgap="10">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    
+    <!-- Título -->
+    <Label text="Título *:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="tituloField" promptText="Título de la tarea" 
+               GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS"/>
+    
+    <!-- Descripción -->
+    <Label text="Descripción:" GridPane.columnIndex="0" GridPane.rowIndex="1" 
+           GridPane.valignment="TOP"/>
+    <TextArea fx:id="descripcionArea" promptText="Descripción detallada (opcional)"
+              wrapText="true" prefRowCount="4"
+              GridPane.columnIndex="1" GridPane.rowIndex="1" 
+              GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
+    
+    <!-- Prioridad -->
+    <Label text="Prioridad *:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <ComboBox fx:id="prioridadCombo" GridPane.columnIndex="1" GridPane.rowIndex="2" 
+              maxWidth="Infinity"/>
+    
+    <!-- Estado -->
+    <Label text="Estado *:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <ComboBox fx:id="estadoCombo" GridPane.columnIndex="1" GridPane.rowIndex="3" 
+              maxWidth="Infinity"/>
+    
+    <!-- Horas Estimadas -->
+    <Label text="Horas Estimadas:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <TextField fx:id="horasEstimadasField" promptText="Ej: 2.5" 
+               GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.hgrow="ALWAYS"/>
+    
+    <!-- Duración -->
+    <Label text="Duración:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <ComboBox fx:id="duracionCombo" GridPane.columnIndex="1" GridPane.rowIndex="5" 
+              maxWidth="Infinity"/>
+    
+    <!-- Tipo de Tarea -->
+    <Label text="Tipo de Tarea:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <ComboBox fx:id="tipoCombo" GridPane.columnIndex="1" GridPane.rowIndex="6" 
+              maxWidth="Infinity"/>
+    
+    <!-- Factibilidad -->
+    <Label text="Factibilidad:" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+    <ComboBox fx:id="factibilidadCombo" GridPane.columnIndex="1" GridPane.rowIndex="7" 
+              maxWidth="Infinity"/>
+    
+</GridPane>
