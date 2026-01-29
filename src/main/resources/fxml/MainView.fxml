@@ -57,6 +57,7 @@
                 <Button text="🔄 Cambiar Estado" onAction="#onToggleStatus"/>
                 <Button text="🔃 Recargar" onAction="#onRefresh"/>
                 <Region HBox.hgrow="ALWAYS" />
+                <Button text="ℹ️ Acerca de" onAction="#onAbout"/>
                 <Button text="⬇️ Exportar" onAction="#onExport"/>
                 <Button text="⬆️ Importar" onAction="#onImport"/>
             </HBox>

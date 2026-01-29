@@ -538,6 +538,21 @@ public class MainViewController {
         
         alert.showAndWait();
     }
+
+    @FXML
+    private void onAbout() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Acerca de");
+        alert.setHeaderText("TODO CRUD List");
+        alert.setContentText("Tomas Gonzalez — Copyright 2026\n"
+                + "Si estás interesado en un técnico, escríbeme a tgextreme89@gmail.com");
+
+        if (taskTable != null && taskTable.getScene() != null) {
+            alert.initOwner(taskTable.getScene().getWindow());
+        }
+
+        alert.showAndWait();
+    }
     
     /**
      * Opciones de filtro por estado.
